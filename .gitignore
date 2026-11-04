@@ -1,2 +1,7 @@
 .DS_Store
 **/.DS_Store
+
+# Archivos generados al compilar (Projucer y CMake)
+**/Builds/
+**/JuceLibraryCode/
+**/build/

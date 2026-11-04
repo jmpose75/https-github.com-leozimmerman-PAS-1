@@ -1,0 +1,22 @@
+# .gitignore para un proyecto JUCE
+# Copiá este archivo a la carpeta de tu proyecto y renombralo a ".gitignore"
+# (con el punto adelante y sin ".txt").
+
+# Generados por Projucer: se vuelven a crear al guardar el .jucer
+Builds/
+JuceLibraryCode/
+
+# Generados por CMake
+build/
+cmake-build-*/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vs/
+.vscode/
+.idea/
+*.user
+xcuserdata/
