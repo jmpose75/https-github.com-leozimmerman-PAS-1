@@ -8,6 +8,7 @@ JuceLibraryCode/
 
 # Generados por CMake
 build/
+build-*/
 cmake-build-*/
 
 # Sistema operativo

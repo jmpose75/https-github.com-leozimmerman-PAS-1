@@ -12,6 +12,10 @@ project (HelloJuce VERSION 1.0.0)
 
 set (CMAKE_CXX_STANDARD 17)
 
+# En Xcode y Visual Studio: agrupa los archivos en carpetas, y los módulos de JUCE en "JUCE Modules"
+set_property (GLOBAL PROPERTY USE_FOLDERS YES)
+option (JUCE_ENABLE_MODULE_SOURCE_GROUPS "Mostrar los módulos de JUCE en el IDE" ON)
+
 # --- 1. Encontrar JUCE --------------------------------------------------------
 set (JUCE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../../JUCE" CACHE PATH "Carpeta de JUCE")
 
@@ -35,9 +39,15 @@ juce_add_gui_app (HelloJuce
 juce_generate_juce_header (HelloJuce)
 
 # --- 3. Archivos fuente (los mismos que usa el .jucer) ------------------------
-target_sources (HelloJuce PRIVATE
+set (SOURCES
     Source/Main.cpp
+    Source/MainComponent.h
     Source/MainComponent.cpp)
+
+target_sources (HelloJuce PRIVATE ${SOURCES})
+
+# En el IDE, los archivos aparecen en una carpeta "Source", como en Projucer
+source_group (TREE "${CMAKE_CURRENT_SOURCE_DIR}" FILES ${SOURCES})
 
 target_compile_definitions (HelloJuce PRIVATE
     JUCE_WEB_BROWSER=0

@@ -61,10 +61,13 @@ void MainComponent::releaseResources()
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
 {
-    // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+    // Color de fondo
+    g.fillAll (juce::Colours::darkblue);
 
-    // You can add your drawing code here!
+    // Texto centrado en la ventana
+    g.setColour (juce::Colours::white);
+    g.setFont (32.0f);
+    g.drawText ("Hola, JUCE", getLocalBounds(), juce::Justification::centred);
 }
 
 void MainComponent::resized()
