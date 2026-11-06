@@ -5,7 +5,7 @@
 Comprobar que tenés el entorno de trabajo completo: armar un proyecto JUCE con código que no escribiste,
 compilarlo, modificarlo y llevar el historial de cambios con Git hasta publicarlo en GitHub.
 
-No hace falta entender cómo funciona el audio de la app: eso lo vemos en la sección 2.
+No hace falta entender cómo funciona el audio de la app: eso lo vemos en el módulo 2.
 
 ## La app
 
@@ -88,7 +88,7 @@ qué le pediste y si tuviste que corregir algo.
 
 ## Entrega
 
-El **link al repositorio de GitHub**, antes del comienzo de la sección 3.
+El **link al repositorio de GitHub**, antes del comienzo del módulo 3.
 
 ## Checklist de revisión
 

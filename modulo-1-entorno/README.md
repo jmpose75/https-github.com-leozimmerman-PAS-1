@@ -1,6 +1,6 @@
-# Sección 1 · Entorno de trabajo
+# Módulo 1 · Entorno de trabajo
 
-Al terminar esta sección vas a tener un proyecto JUCE que compila, versionado con Git y publicado en GitHub,
+Al terminar este módulo vas a tener un proyecto JUCE que compila, versionado con Git y publicado en GitHub,
 y vas a saber modificarlo con ayuda de una herramienta de IA desde la terminal.
 
 | Bloque | Tema |

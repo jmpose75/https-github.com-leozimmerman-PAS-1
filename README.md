@@ -2,7 +2,7 @@
 
 Recursos para el seminario de Programación Aplicada al Sonido 1
 
-Cursada 2025
+Cursada 2026
 
 
 ## Docente
