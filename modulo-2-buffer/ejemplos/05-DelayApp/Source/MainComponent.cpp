@@ -14,7 +14,7 @@ MainComponent::MainComponent()
 
     formatManager.registerBasicFormats();
 
-    // ==== NUEVO: controles del delay ====
+    // ==== Controles del delay ====
     timeSlider.setRange (1.0, 2000.0, 1.0);
     timeSlider.setValue (delayTimeMs);
     timeSlider.onValueChange = [this] { delayTimeMs = (float) timeSlider.getValue(); };
@@ -37,7 +37,6 @@ MainComponent::MainComponent()
     addAndMakeVisible (timeLabel);
     addAndMakeVisible (feedbackLabel);
     addAndMakeVisible (mixLabel);
-    // ==== Fin de lo nuevo ====
 
     setSize (600, 400);
     setAudioChannels (0, 2); // 0 entradas, 2 salidas (estéreo)
@@ -57,7 +56,7 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
 {
     transport.prepareToPlay (samplesPerBlockExpected, sampleRate);
 
-    // ==== NUEVO: reservar el buffer circular ====
+    // ==== Reservar el buffer circular ====
     // Se reserva acá y no en getNextAudioBlock: en el hilo de audio no se pide memoria.
     currentSampleRate = sampleRate;
     int maxDelaySamples = (int) (2.0 * sampleRate);  // 2 segundos
@@ -72,7 +71,7 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     // El reproductor llena el buffer con las muestras del archivo (o con silencio si está en stop).
     transport.getNextAudioBlock (bufferToFill);
 
-    // ==== NUEVO: delay con buffer circular ====
+    // ==== Delay con buffer circular ====
     // Cada muestra que entra se guarda en el buffer circular. Para el eco, se lee la muestra que
     // se guardó delaySamples muestras atrás. Al llegar al final del buffer se vuelve al principio.
     //
@@ -170,7 +169,7 @@ void MainComponent::resized()
     row.removeFromLeft (10);
     stopButton.setBounds (row.removeFromLeft (100));
 
-    // ==== NUEVO: sliders del delay ====
+    // ==== Sliders del delay ====
     area.removeFromTop (30);
     auto timeRow = area.removeFromTop (30);
     timeLabel.setBounds (timeRow.removeFromLeft (100));

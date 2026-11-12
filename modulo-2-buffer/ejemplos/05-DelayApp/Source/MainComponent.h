@@ -33,7 +33,7 @@ private:
     void openFile (const juce::File& file);
     // ---- Fin del reproductor ----
 
-    // ==== NUEVO en este ejemplo: delay estéreo ====
+    // ==== Delay estéreo ====
 
     // Parámetros: los cambia la interfaz y los usa el audio (std::atomic, ver ejemplo 02).
     std::atomic<float> delayTimeMs { 400.0f }; // tiempo de delay en milisegundos

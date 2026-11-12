@@ -4,8 +4,8 @@ Leer y modificar las muestras del buffer de audio: análisis (RMS), interfaz gr�
 
 ## Ejemplos
 
-Todos parten del **01**, un reproductor de archivos. La parte del reproductor es igual en todos;
-lo nuevo de cada ejemplo está marcado en el código con `==== NUEVO ====`.
+Todos parten del **01**, un reproductor de archivos: la parte del reproductor es igual en todos
+y cada ejemplo le agrega algo (un medidor, un efecto).
 
 | Carpeta | Qué muestra |
 |---|---|
@@ -16,6 +16,10 @@ lo nuevo de cada ejemplo está marcado en el código con `==== NUEVO ====`.
 | [`ejemplos/05-DelayApp`](ejemplos/05-DelayApp) | Delay estéreo con buffer circular, feedback y dry/wet |
 
 Para probarlos hay archivos de audio en [`audiofiles/`](../audiofiles).
+
+## Ejercicio
+
+La consigna del sábado está en [`ejercicios/`](ejercicios): **TP 2**, una app libre que analice o procese el buffer.
 
 ## Compilar
 

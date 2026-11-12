@@ -14,7 +14,7 @@ MainComponent::MainComponent()
 
     formatManager.registerBasicFormats();
 
-    // ==== NUEVO: controles del filtro ====
+    // ==== Controles del filtro ====
     cutoffSlider.setRange (20.0, 20000.0, 1.0);
     cutoffSlider.setSkewFactorFromMidPoint (1000.0); // más recorrido para los graves, como un oído
     cutoffSlider.setValue (1000.0);
@@ -29,7 +29,6 @@ MainComponent::MainComponent()
     typeBox.onChange = [this] { highPass = (typeBox.getSelectedId() == 2); };
     addAndMakeVisible (typeBox);
     addAndMakeVisible (typeLabel);
-    // ==== Fin de lo nuevo ====
 
     setSize (600, 400);
     setAudioChannels (0, 2); // 0 entradas, 2 salidas (estéreo)
@@ -49,7 +48,6 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
 {
     transport.prepareToPlay (samplesPerBlockExpected, sampleRate);
 
-    // ==== NUEVO ====
     currentSampleRate = sampleRate; // guardarlo para usarlo en getNextAudioBlock
     lastOutput[0] = 0.0f;           // empezar con el filtro "vacío"
     lastOutput[1] = 0.0f;
@@ -61,7 +59,7 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     // El reproductor llena el buffer con las muestras del archivo (o con silencio si está en stop).
     transport.getNextAudioBlock (bufferToFill);
 
-    // ==== NUEVO: filtro de primer orden, muestra por muestra ====
+    // ==== Filtro de primer orden, muestra por muestra ====
     //
     // En el ejemplo 02 suavizamos el medidor con:
     //     nuevoValor = ultimoValor * n + nuevoValor * (1 - n)
@@ -133,7 +131,7 @@ void MainComponent::resized()
     row.removeFromLeft (10);
     stopButton.setBounds (row.removeFromLeft (100));
 
-    // ==== NUEVO: controles del filtro ====
+    // ==== Controles del filtro ====
     area.removeFromTop (30);
     auto typeRow = area.removeFromTop (30);
     typeLabel.setBounds (typeRow.removeFromLeft (100));

@@ -14,7 +14,7 @@ MainComponent::MainComponent()
 
     formatManager.registerBasicFormats();
 
-    // ==== NUEVO: sliders de ganancia y paneo ====
+    // ==== Sliders de ganancia y paneo ====
     gainSlider.setRange (0.0, 1.0, 0.01);   // 0 = silencio, 1 = volumen original
     gainSlider.setValue (1.0);
     gainSlider.setTextBoxStyle (juce::Slider::TextBoxRight, false, 60, 20);
@@ -28,7 +28,6 @@ MainComponent::MainComponent()
     panSlider.onValueChange = [this] { pan = (float) panSlider.getValue(); };
     addAndMakeVisible (panSlider);
     addAndMakeVisible (panLabel);
-    // ==== Fin de lo nuevo ====
 
     setSize (600, 400);
     setAudioChannels (0, 2); // 0 entradas, 2 salidas (estéreo)
@@ -55,7 +54,7 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     // El reproductor llena el buffer con las muestras del archivo (o con silencio si está en stop).
     transport.getNextAudioBlock (bufferToFill);
 
-    // ==== NUEVO: ganancia y paneo, muestra por muestra ====
+    // ==== Ganancia y paneo, muestra por muestra ====
     auto* buffer = bufferToFill.buffer;
     if (buffer->getNumChannels() < 2)
         return; // este ejemplo necesita estéreo
@@ -129,7 +128,7 @@ void MainComponent::resized()
     row.removeFromLeft (10);
     stopButton.setBounds (row.removeFromLeft (100));
 
-    // ==== NUEVO: sliders ====
+    // ==== Sliders ====
     area.removeFromTop (30);
     auto gainRow = area.removeFromTop (30);
     gainLabel.setBounds (gainRow.removeFromLeft (110));

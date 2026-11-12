@@ -33,7 +33,7 @@ private:
     void openFile (const juce::File& file);
     // ---- Fin del reproductor ----
 
-    // ==== NUEVO en este ejemplo: filtro de primer orden ====
+    // ==== Filtro de primer orden ====
 
     // Parámetros: los cambia la interfaz y los usa el audio (std::atomic, ver ejemplo 02).
     std::atomic<float> cutoffHz { 1000.0f };  // frecuencia de corte

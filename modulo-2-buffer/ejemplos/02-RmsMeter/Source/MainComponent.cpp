@@ -14,7 +14,7 @@ MainComponent::MainComponent()
 
     formatManager.registerBasicFormats();
 
-    // ==== NUEVO: controles del medidor ====
+    // ==== Controles del medidor ====
     smoothingSlider.setRange (0.0, 0.99, 0.01); // n: 0 = sin suavizado, cerca de 1 = muy suavizado
     smoothingSlider.setValue (0.8);
     smoothingSlider.setTextBoxStyle (juce::Slider::TextBoxRight, false, 60, 20);
@@ -25,7 +25,6 @@ MainComponent::MainComponent()
     addAndMakeVisible (valueLabel);
 
     startTimerHz (30); // timerCallback() se va a llamar 30 veces por segundo
-    // ==== Fin de lo nuevo ====
 
     setSize (600, 400);
     setAudioChannels (0, 2); // 0 entradas, 2 salidas (estéreo)
@@ -52,7 +51,7 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     // El reproductor llena el buffer con las muestras del archivo (o con silencio si está en stop).
     transport.getNextAudioBlock (bufferToFill);
 
-    // ==== NUEVO: calcular el RMS del bloque, muestra por muestra ====
+    // ==== Calcular el RMS del bloque, muestra por muestra ====
     // RMS = raíz cuadrada del promedio de los cuadrados de las muestras.
     //
     //              ___________________________________
@@ -87,7 +86,7 @@ void MainComponent::releaseResources()
 }
 
 //==============================================================================
-// NUEVO: el Timer. Corre en el hilo de la interfaz, 30 veces por segundo.
+// El Timer. Corre en el hilo de la interfaz, 30 veces por segundo.
 
 void MainComponent::timerCallback()
 {
@@ -154,7 +153,7 @@ void MainComponent::resized()
     row.removeFromLeft (10);
     stopButton.setBounds (row.removeFromLeft (100));
 
-    // ==== NUEVO: medidor, valor y slider ====
+    // ==== Medidor, valor y slider ====
     area.removeFromTop (30);
     meterArea = area.removeFromTop (40);
 

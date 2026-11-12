@@ -33,7 +33,7 @@ private:
     void openFile (const juce::File& file);
     // ---- Fin del reproductor ----
 
-    // ==== NUEVO en este ejemplo: ganancia y paneo ====
+    // ==== Ganancia y paneo ====
 
     // Parámetros: los cambia la interfaz y los usa el audio (std::atomic, ver ejemplo 02).
     std::atomic<float> gain { 1.0f }; // de 0 a 1: cada muestra se multiplica por este número

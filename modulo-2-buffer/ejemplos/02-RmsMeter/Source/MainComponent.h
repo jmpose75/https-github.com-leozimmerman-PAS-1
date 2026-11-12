@@ -3,7 +3,7 @@
 #include <JuceHeader.h>
 
 // La ventana de la app. Es un AudioAppComponent: un componente gráfico que además produce audio.
-// NUEVO: también es un Timer, para actualizar el medidor varias veces por segundo.
+// También es un Timer, para actualizar el medidor varias veces por segundo.
 class MainComponent : public juce::AudioAppComponent,
                       private juce::Timer
 {
@@ -35,7 +35,7 @@ private:
     void openFile (const juce::File& file);
     // ---- Fin del reproductor ----
 
-    // ==== NUEVO en este ejemplo: medidor de RMS ====
+    // ==== Medidor de RMS ====
 
     // El hilo de audio escribe el RMS de cada bloque y el hilo de la interfaz lo lee.
     //
