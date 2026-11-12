@@ -6,3 +6,12 @@
 **/JuceLibraryCode/
 **/build/
 **/build-*/
+
+# IDEs: Visual Studio (también "Abrir carpeta" con CMake), VS Code, CLion, Xcode
+.vs/
+**/out/
+*.user
+.vscode/
+.idea/
+**/cmake-build-*/
+xcuserdata/

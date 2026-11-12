@@ -8,7 +8,7 @@ El mismo código fuente (`Source/`) se puede compilar de tres maneras.
 ## 1. Con Projucer
 
 1. En Projucer, la primera vez: *Global Paths → Path to JUCE* con la carpeta de JUCE.
-2. Abrir `HelloJuce.jucer`, elegir el exportador (Xcode, Visual Studio 2022 o Linux Makefile) y hacer clic en *Save and Open in IDE*.
+2. Abrir `HelloJuce.jucer`, elegir el exportador (Xcode, Visual Studio 2022, Visual Studio 2026 o Linux Makefile: el que coincida con tu versión de Visual Studio) y hacer clic en *Save and Open in IDE*.
 3. Compilar y ejecutar desde el IDE (en Xcode, esquema *HelloJuce - App*).
 
 Projucer genera las carpetas `Builds/` y `JuceLibraryCode/`. No se suben al repo.

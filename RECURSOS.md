@@ -11,7 +11,7 @@ Links útiles para el curso, ordenados por tipo de recurso. Entre corchetes, el 
 | [JUCE · descarga](https://juce.com/get-juce/) | Descargar JUCE (usamos la versión 9) | [1] |
 | [JUCE · releases en GitHub](https://github.com/juce-framework/JUCE/releases) | Todas las versiones, con las notas de cada una | [1] |
 | [Xcode](https://developer.apple.com/xcode/) | IDE y compilador en macOS | [1] |
-| [Visual Studio 2022 Community](https://visualstudio.microsoft.com/es/vs/community/) | IDE y compilador en Windows. Instalar con *Desarrollo para el escritorio con C++* | [1] |
+| [Visual Studio Community](https://visualstudio.microsoft.com/es/vs/community/) (2022 o 2026) | IDE y compilador en Windows. Instalar con *Desarrollo para el escritorio con C++* | [1] |
 | [Dependencias de JUCE en Linux](https://github.com/juce-framework/JUCE/blob/master/docs/Linux%20Dependencies.md) | Paquetes que hay que instalar en Linux | [1] |
 | [CMake](https://cmake.org/download/) | Compilar proyectos con `CMakeLists.txt` (en macOS también con `brew install cmake`) | [1] |
 | [Git](https://git-scm.com/downloads) | Control de versiones. En Windows trae Git Bash | [1] |

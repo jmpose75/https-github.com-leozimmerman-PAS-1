@@ -21,7 +21,7 @@ Para probarlos hay archivos de audio en [`audiofiles/`](../audiofiles).
 
 Cada ejemplo tiene un `.jucer` y un `CMakeLists.txt`, igual que HelloJuce del módulo 1:
 
-- **Projucer:** abrir el `.jucer`, elegir el exportador (Xcode, Visual Studio 2022 o Linux Makefile) y *Save and Open in IDE*.
+- **Projucer:** abrir el `.jucer`, elegir el exportador (Xcode, Visual Studio 2022, Visual Studio 2026 o Linux Makefile: el que coincida con tu versión de Visual Studio) y *Save and Open in IDE*.
 - **CMake:** desde la carpeta del ejemplo, `cmake -B build` y `cmake --build build`.
 
 Más detalle en el [README de HelloJuce](../modulo-1-entorno/ejemplo/HelloJuce/README.md).
