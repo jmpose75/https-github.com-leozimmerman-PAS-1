@@ -9,8 +9,8 @@ La app es libre. Lo único que pedimos es que quede dentro de lo que vimos en el
 
 ## Punto de partida
 
-Copiá la carpeta [`../ejemplos/01-AudioFilePlayer`](../ejemplos/01-AudioFilePlayer) a tu carpeta de entrega
-(ver *Entrega*) y cambiale el nombre al proyecto:
+Copiá la carpeta [`../ejemplos/01-AudioFilePlayer`](../ejemplos/01-AudioFilePlayer) a una carpeta **fuera de este repo**,
+en tu propio repositorio de Git, y cambiale el nombre al proyecto:
 
 - **Projucer:** abrí el `.jucer` y cambiá el *Project Name*.
 - **CMake:** en el `CMakeLists.txt`, reemplazá `AudioFilePlayer` por el nombre de tu app.
